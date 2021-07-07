@@ -1,7 +1,7 @@
 /**********************global*****************/
 body{
     font-family: 'Work Sans', sans-serif;
-    margin: auto;
+    margin: 0;
 }
 .container{
     padding: 0 15px 0 15px;
@@ -87,16 +87,41 @@ nav div i{
     font-size: 1.5em;
 }
 /************************features*****************************/
-.features{
+/*.features{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
     grid-gap: 20px;
     background-color: var(--gray-back);
+}*/
+.features{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--gray-back);
+    justify-content: space-around;
 }
 .features div{
+    
+    width: 300px;
+    text-align: center;
+    padding: 70px 0 ;
+}
+@media (max-width: 770px){
+    .features{
+    flex-direction: column;
+        align-items: center;
+
+}
+    .features div{
+    
+    width: 500px;
+}
+}
+
+
+/*.features div{
     text-align: center;
     padding: 70px 40px;
-}
+}*/
 .features i {
     font-size: 3em;
     color:var(--main-color) ;
@@ -128,10 +153,30 @@ nav div i{
     font-size: 1.5em;
     color:var(--main-text-color) ;
 }
-.serv2{
+/*.serv2{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
     grid-gap: 30px;
+}*/
+.serv2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.serv2 .col, .card{
+    width: 300px;
+    margin-bottom: 20px;
+}
+@media (max-width: 770px){
+    .serv2{
+    flex-direction: column;
+        align-items: center;
+
+}
+    .serv2 .col, .card{
+    
+    width: 500px;
+}
 }
 .serv2 .col i{
     position: relative;
@@ -181,9 +226,17 @@ nav div i{
 /*********************** about *********************************/
 .about{
      display: grid;
-    grid-template-columns:  minmax(300px,1fr)  2fr;
+    grid-template-columns:  1fr  2fr;
     grid-gap: 30px;
     
+}
+@media(max-width:768px){
+    .about{
+     display: grid;
+    grid-template: "1fr" "1fr";
+    grid-gap: 30px;
+    
+}
 }
 .hr{
     border-bottom: solid 1px var(--main-color);
@@ -207,13 +260,13 @@ nav div i{
 }
 .line3{
     height: 300px;
-    width: 200px;
+    width: 100px;
     border-left:solid 80px var(--main-color);
     border-bottom:solid 90px var(--main-color);
     display: flex;
     align-items: center;
     position: relative;
-    left: -70px;
+    left: -100px;
 }
 .about .col{
     display: flex;
