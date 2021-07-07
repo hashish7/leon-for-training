@@ -181,7 +181,7 @@ nav div i{
 /*********************** about *********************************/
 .about{
      display: grid;
-    grid-template-columns:  minmax(300px,1fr)  minmax(600px,2fr);
+    grid-template-columns:  minmax(300px,1fr)  2fr;
     grid-gap: 30px;
     
 }
