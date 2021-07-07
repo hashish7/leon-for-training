@@ -225,17 +225,24 @@ nav div i{
 }
 /*********************** about *********************************/
 .about{
-     display: grid;
-    grid-template-columns:  1fr  2fr;
-    grid-gap: 30px;
-    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.about .col{
+    display: flex;
+    width: 50%;
 }
 @media(max-width:768px){
     .about{
-     display: grid;
-    grid-template: "1fr" "1fr";
-    grid-gap: 30px;
+     flex-direction: column;
+        text-align: center;
     
+}
+    .about .col{
+
+    width: 90%;
 }
 }
 .hr{
@@ -268,9 +275,7 @@ nav div i{
     position: relative;
     left: -100px;
 }
-.about .col{
-    display: flex;
-}
+
 /********************* Contact **********************************/
 .contacts{
     background-color: var(--gray-back);
